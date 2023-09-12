@@ -9,18 +9,19 @@
 /*   Updated: 2023/09/07 13:44:00 by msimic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- #include "libft.h"
- 
-size_t ft_strlen(const char *s)
-{
-    size_t x;
 
-    x = 0;
-    while (s[x] != '\0')
-    {
-        x++;
-    }
-    return (x);
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	x;
+
+	x = 0;
+	while (s[x] != '\0')
+	{
+		x++;
+	}
+	return (x);
 }
 /*
 int	main()
