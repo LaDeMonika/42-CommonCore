@@ -1,11 +1,21 @@
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/10 11:29:05 by msimic            #+#    #+#             */
+/*   Updated: 2023/10/10 13:51:11 by msimic           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_new_rest_str(char *rest_str)
+#include "get_next_line.h"
+
+char	*ft_new_rest_str(char *rest_str)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*str;
 
 	i = 0;
@@ -28,9 +38,9 @@ char *ft_new_rest_str(char *rest_str)
 	return (str);
 }
 
-char *ft_get_line(char *rest_str)
+char	*ft_get_line(char *rest_str)
 {
-	int	i;
+	int		i;
 	char	*str;
 
 	i = 0;
@@ -38,7 +48,7 @@ char *ft_get_line(char *rest_str)
 		return (NULL);
 	while (rest_str[i] && rest_str[i] != '\n')
 		i++;
-	str = (char	*)malloc(sizeof(char) * (i + 2));
+	str = (char *)malloc(sizeof(char) * (i + 2));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -56,12 +66,12 @@ char *ft_get_line(char *rest_str)
 	return (str);
 }
 
-char *ft_read_rest_str(fd, char	*rest_str)
+char	*ft_read_rest_str(int fd, char *rest_str)
 {
 	char	*buf;
-	int	rd_bytes;
+	int		rd_bytes;
 
-	but = malloc ((BUFFER_SIZE + 1) * sizeof(char))
+	buf = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buf)
 		return (NULL);
 	rd_bytes = 1;
@@ -84,7 +94,7 @@ char *ft_read_rest_str(fd, char	*rest_str)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char		*rest_str;
+	static char	*rest_str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
@@ -96,21 +106,16 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/* int main()
+/* int	main(void)
 {
-	int		fd;
-	char	bla[10];
+	int	fd;
 
-	fd = open("halla.txt", O_RDWR | O_CREAT);
-	get_next_line(fd);
-	get_next_line(fd);
+	fd = open("halla.txt", O_RDWR);
 	if (fd == -1)
 		return (-1);
-	write(fd, "hey", 3);
-	close(fd);
-	fd = open("halla.txt", O_RDWR);
-	read(fd, bla, 10);
-	printf("%s", bla);
+	/* get_next_line(fd);
+	get_next_line(fd); */
+	printf("%s", get_next_line(fd));
+	// write(fd, "hey", 3);
 	close(fd);
 } */
-
