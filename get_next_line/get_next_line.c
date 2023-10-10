@@ -113,8 +113,8 @@ char	*get_next_line(int fd)
 	fd = open("halla.txt", O_RDWR);
 	if (fd == -1)
 		return (-1);
-	/* get_next_line(fd);
-	get_next_line(fd); */
+	//get_next_line(fd);
+	//get_next_line(fd);
 	printf("%s", get_next_line(fd));
 	// write(fd, "hey", 3);
 	close(fd);
