@@ -6,7 +6,7 @@
 /*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 11:29:05 by msimic            #+#    #+#             */
-/*   Updated: 2023/10/10 14:42:47 by msimic           ###   ########.fr       */
+/*   Updated: 2023/10/11 15:26:31 by msimic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,13 +109,20 @@ char	*get_next_line(int fd)
 /* int	main(void)
 {
 	int	fd;
+	char	*str = NULL;
 
-	fd = open("halla.txt", O_RDWR);
+	fd = open("ba.txt", O_RDWR);
 	if (fd == -1)
 		return (-1);
-	//get_next_line(fd);
-	//get_next_line(fd);
-	printf("%s", get_next_line(fd));
-	// write(fd, "hey", 3);
+	str = get_next_line(fd);
+	//str = get_next_line(0);
+	//printf("%s", str);
+	//return (0);
+	while (str)
+	{
+		printf("%s", str);
+		free(str);
+		str = get_next_line(fd);
+	}
 	close(fd);
-}*/
+} */
