@@ -6,7 +6,7 @@
 /*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 11:31:52 by msimic            #+#    #+#             */
-/*   Updated: 2023/10/11 11:08:47 by msimic           ###   ########.fr       */
+/*   Updated: 2023/10/12 16:18:36 by msimic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (!s1)
 	{
 		s1 = malloc(sizeof(char) * 1);
+		if (!s1)
+			return (NULL);
 		s1[0] = 0;
 	}
 	funcfjoin(s1, s2, str);

@@ -6,7 +6,7 @@
 /*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:08:49 by msimic            #+#    #+#             */
-/*   Updated: 2023/10/11 11:10:12 by msimic           ###   ########.fr       */
+/*   Updated: 2023/10/12 16:02:39 by msimic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 8
+#  define BUFFER_SIZE 1
 # endif
 
 # include <fcntl.h>
