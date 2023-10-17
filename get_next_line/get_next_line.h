@@ -6,7 +6,7 @@
 /*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:08:49 by msimic            #+#    #+#             */
-/*   Updated: 2023/10/12 16:02:39 by msimic           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:46:42 by msimic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 
 # include <fcntl.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 
 char	*get_next_line(int fd);

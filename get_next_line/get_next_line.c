@@ -6,13 +6,13 @@
 /*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 11:29:05 by msimic            #+#    #+#             */
-/*   Updated: 2023/10/12 16:21:17 by msimic           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:53:58 by msimic           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_new_rest_str(char *rest_str)
+char	*free_create_buffer(char *rest_str)
 {
 	int		i;
 	int		j;
@@ -38,7 +38,7 @@ char	*ft_new_rest_str(char *rest_str)
 	return (str);
 }
 
-char	*ft_get_line(char *rest_str)
+static char	*get_line(char *rest_str)
 {
 	int		i;
 	char	*str;
@@ -66,7 +66,7 @@ char	*ft_get_line(char *rest_str)
 	return (str);
 }
 
-char	*ft_read_rest_str(int fd, char *rest_str)
+char	*read_create_buffer(int fd, char *rest_str)
 {
 	char	*buf;
 	int		rd_bytes;
@@ -98,15 +98,17 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	rest_str = ft_read_rest_str(fd, rest_str);
+	rest_str = read_create_buffer(fd, rest_str);
 	if (!rest_str)
 		return (NULL);
-	line = ft_get_line(rest_str);
-	rest_str = ft_new_rest_str(rest_str);
+	line = get_line(rest_str);
+	rest_str = free_create_buffer(rest_str);
 	return (line);
 }
 
-/* int	main(void)
+/* # include <stdio.h>
+
+int	main(void)
 {
 	int	fd;
 	char	*str = NULL;
