@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   OK_ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msimic <msimic@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -51,8 +51,8 @@ int	ft_atoi(const char *str)
 int main()
 {
     const char    *s1 = "-98070", *s2 = "790908";
-    int a = ft_atoi(s1);
-    int b = ft_atoi(s2);
+    int a = OK_ft_atoi(s1);
+    int b = OK_ft_atoi(s2);
 
     printf("ovo je atoi a: %d, a ovo b: %d\n", a, b);
     printf("ovo je string a: %s, a ovo b: %s", s1, s2);
