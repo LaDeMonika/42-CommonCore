@@ -1,27 +1,35 @@
 #include <unistd.h>
 
-int    repeat_alpha(char c)
-{
-    if (c >= 'a' && c <= 'z')
-        return(c - 'a' + 1);
-    /* char (b --> 98 - 'a' --> 97 + 1 = 2 [bb]) */
-    else if (c >= 'A' && c <= 'Z')
-        return(c - 'A' + 1);
-    return (1);
-}
-
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
     int i;
-    int count;
+    int n;
 
-    if (argc == 2)
+    if (ac == 2)
     {
-        while (argv[1][i])
+        i = 0;
+
+        while (av[1][i])
         {
-            count = repeat_alpha(argv[1][i]);
-            while(count--)
-                write(1, &argv[1][i], 1);
+            n = 0;
+            if (av[1][i] >= 'a' && av[1][i] <= 'z')
+            {
+                n = av[1][i] - 'a' + 1;
+                while(n--)
+                {
+                    write(1, &av[1][i], 1);
+                }
+            }
+            else if (av[1][i] >= 'A' && av[1][i] <= 'Z')
+            {
+                n = av[1][i] - 'A' + 1;
+                while(n--)
+                {
+                    write(1, &av[1][i], 1);
+                }
+            }
+            else
+                write(1, &av[1][i], 1);
             i++;
         }
     }
