@@ -1,7 +1,6 @@
 <h1 align="center"> so_long | 42 Vienna</h1>
 
 <p align="center">"So_long" is a project that involves creating a 2D game in C, challenging players to navigate a maze, gather items, and reach an exit. The project relies on the MinilibX library (mlx) for graphics and input management, enabling the development of an engaging and interactive gaming experience.</p>
-<p align="center"><img align="center" alt="so_long" src="https://user-images.githubusercontent.com/81205527/179134510-48689e9e-f8e4-4165-be40-2e0ec8f5d60d.png"> </a></p>
 <p align="center" alt="screenshot of 2D game"><img src="https://github.com/LaDeMonika/42-Vienna-CommonCore/assets/128793184/11a4724c-a818-4fb4-a6f1-bbec9eea1f8b"></p>
 
 
