@@ -32,7 +32,7 @@ And can only contain these characters:
 | CHAR |	OBJECT   |
 | --------- | ---------- |
 | 1         |   Wall   |
-| C	        | Coin |
+| C	        | Pizza |
 | E	        |   Exit  |
 | P         |   Player  |      
 | 0         |   Floor     |
@@ -68,6 +68,6 @@ This .ber file generates this map:
 Use WASD or arrow keys to move.
 	
 	
-After getting all the coin bags, the exit opens and you can escape downstairs.
+After getting all pizzas, the exit opens and you can escape downstairs.
 	
 You can close the game by Clicking on the red cross on the window’s frame, or pressing Q or Esc.
