@@ -70,4 +70,4 @@ Use WASD or arrow keys to move.
 	
 After getting all pizzas, the exit opens and you can escape downstairs.
 	
-You can close the game by Clicking on the red cross on the window’s frame, or pressing Q or Esc.
+You can close the game by Clicking on the cross on the window’s frame, or pressing Q or Esc.
